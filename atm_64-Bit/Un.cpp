@@ -171,7 +171,7 @@ void scroll_note()	//welcome note
 	for(i=0;i<27;i++)
 	{
 		gotoxy(i,13);cout<<" ";
-		cout<<"CBIT ATM SERVICES";
+		cout<<"MetroDash Service";
 		Sleep(40);
 	}
 
