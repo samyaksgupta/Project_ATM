@@ -2,6 +2,24 @@
 #include<conio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<windows.h>
+#include<iostream>
+#include <climits>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+#include <sstream>
+#include <string>
+#include <vector>
+#include "qrcodegen.hpp"
+
+
+
+
+using namespace std;
+using std::uint8_t;
+using qrcodegen::QrCode;
+using qrcodegen::QrSegment;
 
 typedef struct{
 	char name[50];
@@ -24,19 +42,58 @@ void login();
 int main()
 
 {
+	system("Color 1F");
+	printf("\n\n\n\n\n\n\n\n\n\n\n");
+	printf("\t\t\t\t\tLoading ");
+	char x = 219;
+	for(int i=0;i<35;i++){
+		cout<<x;
+		if(i<10)
+		Sleep(300);
+		if(i<10 && i<20)
+		Sleep(150);
+		if(i>=10)
+		Sleep(25);
+	}
+	system("cls");
+	
+
 		system("Color 1F");
 		system("cls");
-	printf("\t\t=================================================\n");
-	printf("\t\t|                                                     |\n");
-	printf("\t\t|       ------------------------------------          |\n");
-	printf("\t\t|            NEXT GEN TICKETING SYSTEM                |\n");
-	printf("\t\t|       ------------------------------------          |\n");
-	printf("\t\t|                                                     |\n");
-	printf("\t\t|                                                     |\n");
-	printf("\t\t|                                                     |\n");
-	printf("\t\t|                                                     |\n");
-	printf("\t\t=================================================\n\n\n");
-
+	printf("\n\n");
+	printf("\t\t\t\t\t=======================================================\n");
+	printf("\t\t\t\t\t|                                                     |\n");
+	printf("\t\t\t\t\t|       ------------------------------------          |\n");
+	printf("\t\t\t\t\t|            NEXT GEN TICKETING SYSTEM                |\n");
+	printf("\t\t\t\t\t|       ------------------------------------          |\n");
+	printf("\t\t\t\t\t|                                                     |\n");
+	printf("\t\t\t\t\t|                                                     |\n");
+	printf("\t\t\t\t\t|                                                     |\n");
+	printf("\t\t\t\t\t|                                                     |\n");
+	printf("\t\t\t\t\t=======================================================\n\n\n");
+	printf("\t\t\t\t\t              .-=+**#####**+=-.              \n");
+    printf("\t\t\t\t\t          .=*###################*=.          \n");
+    printf("\t\t\t\t\t        =*#####+=:..     ..:=+#####*=        \n");
+    printf("\t\t\t\t\t     .=####*-.                 .-*####=      \n");
+    printf("\t\t\t\t\t    -####+.                       .+####-    \n");
+    printf("\t\t\t\t\t   +###*.                           :*###+   \n");
+    printf("\t\t\t\t\t  *###+.                             .+###*  \n");
+    printf("\t\t\t\t\t +#########################################+ \n");
+    printf("\t\t\t\t\t:###*+++++++++++++++++++#####+++++++++++*###:\n");
+    printf("\t\t\t\t\t+###-                 :*###=            -###+\n");
+    printf("\t\t\t\t\t####.               -*###-              .###*\n");
+    printf("\t\t\t\t\t####              -*##*-                 ####\n");
+    printf("\t\t\t\t\t*###.           =###*:                  .###*\n");
+    printf("\t\t\t\t\t=###+=========+####*====================+###-\n");
+    printf("\t\t\t\t\t ########################################### \n");
+    printf("\t\t\t\t\t :####-...............................-####: \n");
+    printf("\t\t\t\t\t  :####:                             -####:  \n");
+    printf("\t\t\t\t\t   :*###+.                         .+###*.   \n");
+    printf("\t\t\t\t\t     =####+:                     :+####=     \n");
+    printf("\t\t\t\t\t      .=#####+-.             .-+#####=.      \n");
+    printf("\t\t\t\t\t         -+######*+===-===+*######+-         \n");
+    printf("\t\t\t\t\t            :=+###############+=:            \n");
+   
 
 	printf(" \n Press any key to continue:");
 
@@ -46,6 +103,7 @@ int main()
 	int menu_choice,choice_return;
 	start:
 	system("cls");
+	system("Color 1F");
 	printf("\n=================================\n");
 	printf("        TRAIN TICKET SYSTEM");
 	printf("\n=================================");
@@ -71,7 +129,7 @@ int main()
 			break;
 		case 3:
 			cancel();
-			//function not added. code has been removed due to some errors
+			
 			break;
 		case 4:
 			return(0);
@@ -83,26 +141,29 @@ int main()
 }
 
 
+
 void viewdetails(void)
 {
-	system("cls");
-	printf("-----------------------------------------------------------------------------");
-	printf("\nTr.No\tName\t\t\tDestinations\t\tCharges\t\tTime\n");
-	printf("-----------------------------------------------------------------------------");
-	printf("\n1001\tBlue Lines Express\tBoston to Manhattan\t5000\t\t9am");
-	printf("\n1002\tBlue Lines Express\tManhattan To Boston\t5000\t\t12pm");
-	printf("\n1003\tLA City Express\t\tBoston To L.A\t\t4500\t\t8am");
-	printf("\n1004\tLA City Express\t\tL.A To Boston\t\t4500\t\t11am");
-	printf("\n1005\tBronze City Express\tBoston To Chicago\t4000\t\t7am");
-	printf("\n1006\tBronze City Express\tChicago To Boston\t4000\t\t9.30am");
-    printf("\n1007\tKeystone Express\tBoston To Washington\t3500\t\t1pm");
-    printf("\n1008\tKeystone Express\tWashington To Boston\t3500\t\t4pm");
-    printf("\n1009\tMeteor Express\t\tBoston To Miami\t\t6000\t\t3.35pm");
-    printf("\n1009\tMeteor Express\t\tMiami To Boston\t\t6000\t\t4.15pm");
-
+    system("cls");
+    printf("-------------------------------------------------------------------------------------------------\n");
+    printf("Tr.No   Name                    Destinations                         Charges        Time\n");
+    printf("-------------------------------------------------------------------------------------------------\n");
+    printf("1001    Red Line Metro          Dilshad Garden to Rithala              30       5:00 AM - 6:00 AM\n");
+    printf("1002    Yellow Line Metro       Samaypur Badli to HUDA City Centre     40       6:30 AM - 7:30 AM\n");
+    printf("1003    Blue Line Metro         Noida City Centre to Dwarka Sector 21  35       8:00 AM - 9:00 AM\n");
+    printf("1004    Green Line Metro        Inderlok to Mundka                     25       9:30 AM - 10:30 AM\n");
+    printf("1005    Violet Line Metro       Kashmere Gate to Raja Nahar Singh      35       11:00 AM - 12:00 PM\n");
+    printf("1006    Orange Line Metro       Dwarka Sector 21 to Noida City Centre  40       1:00 PM - 2:00 PM\n");
+    printf("1007    Pink Line Metro         Majlis Park to Shiv Vihar              35       2:30 PM - 3:30 PM\n");
+    printf("1008    Magenta Line Metro      Botanical Garden to Janakpuri West     35       4:00 PM - 5:00 PM\n");
+    printf("1009    Airport Express Metro   New Delhi to Dwarka Sector 21          60       5:30 PM - 6:30 PM\n");
+    printf("1010    Grey Line Metro         Dwarka Sector 21 to Najafgarh          25       7:00 PM - 8:00 PM\n");
 }
 
-/*********************************************RESERVATION()*************************************************/
+
+
+
+
 
 void reservation(void)
 {
@@ -116,7 +177,8 @@ void reservation(void)
 
 	printf("\nEnter Your Name:> ");
 	fflush(stdin);
-	gets(passdetails.name);
+	fgets(passdetails.name, sizeof(passdetails.name), stdin);
+
 
 	printf("\nEnter Number of seats:> ");
 	scanf("%d",&passdetails.num_of_seats);
@@ -142,12 +204,45 @@ void reservation(void)
 	start:
 	scanf(" %c",&confirm);
 	if(confirm == 'y')
+	
 	{
 		fprintf(fp,"%s\t\t%d\t\t%d\t\t%.2f\n",&passdetails.name,passdetails.num_of_seats,passdetails.train_num,charges);
 		printf("==================");
 		printf("\n Reservation Done\n");
+		printf("Here Is your qr Code\n");
+				system("cls");
+				system("Color 0F");
+				
+		printf("        ##############  ##          ##      ##############\n");
+    	printf("        ##          ##  ##  ##  ######  ##  ##          ##\n");
+    	printf("        ##  ######  ##      ##      ######  ##  ######  ##\n");
+    	printf("        ##  ######  ##  ####  ######    ##  ##  ######  ##\n");
+    	printf("        ##  ######  ##    ##    ########    ##  ######  ##\n");
+   	 	printf("        ##          ##    ##    ##      ##  ##          ##\n");
+    	printf("        ##############  ##  ##  ##  ##  ##  ##############\n");
+    	printf("                        ##    ######  ##\n");
+    	printf("        ##  ####  ######  ##  ##    ####    ##    ##  ####\n");
+    	printf("                ####    ##  ########  ##    ####    ####\n");
+    	printf("        ######    ####    ####  ######    ##      ##\n");
+    	printf("        ##      ##    ##          ##    ##  ##  ##  ##  ##\n");
+    	printf("          ##  ####  ####  ##  ##    ##      ##    ##    ##\n");
+    	printf("          ##    ##      ########  ##    ##    ####  ######\n");
+    	printf("          ########  ##  ##  ##  ##  ##  ####    ######  ##\n");
+   	 	printf("        ##    ##      ########  ######  ##########    ##\n");
+    	printf("            ####    ############  ##    ############  ##\n");
+    	printf("                        ##  ##  ####  ####      ##    ##\n");
+    	printf("        ##############  ##########      ##  ##  ##    ##\n");
+    	printf("        ##          ##  ######  ##  ##  ##      ##  ####\n");
+    	printf("        ##  ######  ##    ##  ######  ##############  ####\n");
+    	printf("        ##  ######  ##  ####    ####    ##  ##      ##  ##\n");
+    	printf("        ##  ######  ##  ####  ######  ########  ####  ##\n");
+    	printf("        ##          ##    ##          ######        ####\n");
+    	printf("        ##############  ##      ##  ####  ######    ##  ##\n");
+				
+				
 		printf("==================");
 		printf("\nPress any key to go back to Main menu");
+
 	}
 	else
 	{
@@ -164,7 +259,6 @@ void reservation(void)
 	getch();
 }
 
-/*********************************************CHARGE()*************************************************/
 
 float charge(int train_num,int num_of_seats)
 {
@@ -211,7 +305,7 @@ float charge(int train_num,int num_of_seats)
 }
 
 
-/*********************************************PRINTTICKET()*************************************************/
+
 
 void printticket(char name[],int num_of_seats,int train_num,float charges)
 {
@@ -226,72 +320,73 @@ void printticket(char name[],int num_of_seats,int train_num,float charges)
 	printf("\nCharges:\t\t%.2f",charges);
 }
 
-/*********************************************SPECIFICTRAIN()*************************************************/
+
 
 void specifictrain(int train_num)
 {
-
-	if (train_num==1001)
-	{
-		printf("\nTrain:\t\t\tRed Lines Express");
-		printf("\nDestination:\t\tBoston to Manhattan");
-		printf("\nDeparture:\t\t9am ");
-	}
-	if (train_num==1002)
-	{
-		printf("\nTrain:\t\t\tRed Lines Express");
-		printf("\nDestination:\t\tManhattan to Boston");
-		printf("\nDeparture:\t\t12pm");
-	}
-	if (train_num==1003)
-	{
-		printf("\nTrain:\t\t\tLA City Express");
-		printf("\nDestination:\t\tBoston to L.A");
-		printf("\nDeparture:\t\t8am");
-	}
-	if (train_num==1004)
-	{
-		printf("\nTrain:\t\t\tLA City Express");
-		printf("\nDestination:\t\tL.A to Boston");
-		printf("\nDeparture:\t\t11am ");
-	}
-	if (train_num==1005)
-	{
-		printf("\nTrain:\t\t\tIron City Express");
-		printf("\nDestination:\t\tBoston to Chicago");
-		printf("\nDeparture:\t\t7am");
-	}
-	if (train_num==1006)
-	{
-		printf("\ntrain:\t\t\tIron City Express");
-		printf("\nDestination:\t\tChicago to Boston");
-		printf("\nDeparture:\t\t9.30am ");
-	}
-	if (train_num==1007)
-	{
-		printf("\ntrain:\t\t\tKeystone Express");
-		printf("\nDestination:\t\tBoston to Washington");
-		printf("\nDeparture:\t\t1pm ");
-	}
-	if (train_num==1008)
-	{
-		printf("\ntrain:\t\t\tKeystone Express");
-		printf("\n Destination:\t\tWashington to Boston");
-		printf("\nDeparture:\t\t4pm ");
-	}
-	if (train_num==1009)
-	{
-		printf("\ntrain:\t\t\tMeteor Express");
-		printf("\nDestination:\t\tBoston to Miami");
-		printf("\nDeparture:\t\t3.35pm ");
-	}
-	if (train_num==1010)
-	{
-		printf("\ntrain:\t\t\tMeteor Express");
-		printf("\nDestination:\t\tMiami to Boston");
-		printf("\nDeparture:\t\t1.15 ");
-	}
+    if (train_num == 1001)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Red Line)");
+        printf("\nDestination:\t\tDilshad Garden to Rithala");
+        printf("\nDeparture:\t\t5:00 AM - 6:00 AM");
+    }
+    if (train_num == 1002)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Yellow Line)");
+        printf("\nDestination:\t\tSamaypur Badli to HUDA City Centre");
+        printf("\nDeparture:\t\t6:30 AM - 7:30 AM");
+    }
+    if (train_num == 1003)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Blue Line)");
+        printf("\nDestination:\t\tNoida City Centre to Dwarka Sector 21");
+        printf("\nDeparture:\t\t8:00 AM - 9:00 AM");
+    }
+    if (train_num == 1004)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Green Line)");
+        printf("\nDestination:\t\tInderlok to Mundka");
+        printf("\nDeparture:\t\t9:30 AM - 10:30 AM");
+    }
+    if (train_num == 1005)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Violet Line)");
+        printf("\nDestination:\t\tKashmere Gate to Raja Nahar Singh");
+        printf("\nDeparture:\t\t11:00 AM - 12:00 PM");
+    }
+    if (train_num == 1006)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Orange Line)");
+        printf("\nDestination:\t\tDwarka Sector 21 to Noida City Centre");
+        printf("\nDeparture:\t\t1:00 PM - 2:00 PM");
+    }
+    if (train_num == 1007)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Pink Line)");
+        printf("\nDestination:\t\tMajlis Park to Shiv Vihar");
+        printf("\nDeparture:\t\t2:30 PM - 3:30 PM");
+    }
+    if (train_num == 1008)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Magenta Line)");
+        printf("\nDestination:\t\tBotanical Garden to Janakpuri West");
+        printf("\nDeparture:\t\t4:00 PM - 5:00 PM");
+    }
+    if (train_num == 1009)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Airport Express)");
+        printf("\nDestination:\t\tNew Delhi to Dwarka Sector 21");
+        printf("\nDeparture:\t\t5:30 PM - 6:30 PM");
+    }
+    if (train_num == 1010)
+    {
+        printf("\nTrain:\t\t\tDelhi Metro (Grey Line)");
+        printf("\nDestination:\t\tDwarka Sector 21 to Najafgarh");
+        printf("\nDeparture:\t\t7:00 PM - 8:00 PM");
+    }
 }
+
+
 
 void login()
 {
@@ -305,7 +400,7 @@ void login()
 
     printf("\n  =======================  LOGIN FORM  =======================\n  ");
     printf(" \n                       ENTER USERNAME:-");
-	scanf("%s", &uname);
+	scanf("%s", uname);
 	printf(" \n                       ENTER PASSWORD:-");
 	while(i<10)
 	{
@@ -346,7 +441,7 @@ void login()
 		system("cls");
 }
 
-void cancel(void)   /* Sorry this function does not work. Coding is not completed. Codes have been removed due to some errors  */
+void cancel(void)   
 {
 	system("cls");
 	int trainnum;
@@ -358,8 +453,3 @@ void cancel(void)   /* Sorry this function does not work. Coding is not complete
 		printf("\n\nCancelled");
 		getch();
 }
-
-
-
-
-
